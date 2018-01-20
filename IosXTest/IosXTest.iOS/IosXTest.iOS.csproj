@@ -46,7 +46,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -89,10 +89,15 @@
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Views\SecondView.cs" />
+    <Compile Include="Views\SecondView.designer.cs">
+      <DependentUpon>SecondView.cs</DependentUpon>
+    </Compile>
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <InterfaceDefinition Include="Views\FirstView.xib" />
     <None Include="packages.config" />
+    <InterfaceDefinition Include="Views\SecondView.xib" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Setup.cs" />

@@ -1,16 +1,16 @@
-﻿using MvvmCross.Binding.BindingContext;
+﻿using System;
 using MvvmCross.iOS.Views;
+using MvvmCross.iOS.Views.Presenters.Attributes;
 using IosXTest.Core.ViewModels;
-using System;
 
 using UIKit;
-using MvvmCross.iOS.Views.Presenters.Attributes;
 
 namespace IosXTest.iOS.Views
 {
-    public partial class FirstView : MvxViewController
+    [MvxRootPresentation (WrapInNavigationController = false)]
+    public partial class SecondView : MvxViewController<SecondViewModel>
     {
-        public FirstView() : base("FirstView", null)
+        public SecondView() : base("SecondView", null)
         {
         }
 
@@ -26,11 +26,6 @@ namespace IosXTest.iOS.Views
             base.ViewDidLoad();
 
             // Perform any additional setup after loading the view, typically from a nib.
-            var set = this.CreateBindingSet<FirstView, FirstViewModel>();
-            set.Bind(Label).To(vm => vm.Hello);
-            set.Bind(TextField).To(vm => vm.Hello);
-            set.Bind(Button).To(vm => vm.ButtonCommand);
-            set.Apply();
         }
     }
 }

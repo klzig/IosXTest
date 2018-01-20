@@ -113,6 +113,19 @@ namespace IosXTest.iOS
         {
             changed.PropertyChanged += (sender, e) => { var test = e.PropertyName; };
         }
+        // Added after StarterPack to fix crash on launch: https://stackoverflow.com/questions/47050608/mvvmcross-5-4-crash-on-app-startup-with-nullref-at-consolelogprovider
+        public void Include(ConsoleColor color)
+        {
+            Console.Write("");
+            Console.WriteLine("");
+            color = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+        }
     }
 }
 
