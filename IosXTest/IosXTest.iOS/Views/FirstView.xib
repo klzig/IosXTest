@@ -13,7 +13,8 @@
                 <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
                 <outlet property="TextField" destination="189" id="name-outlet-189"/>
                 <outlet property="Label" destination="153" id="name-outlet-153"/>
-                <outlet property="Button" destination="305" id="name-outlet-305"/>
+                <outlet property="Nav1Button" destination="305" id="name-outlet-305"/>
+                <outlet property="Nav2Button" destination="422" id="name-outlet-422"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -36,10 +37,18 @@
                     <textInputTraits key="textInputTraits"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="305">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="305">
                     <rect key="frame" x="16" y="218" width="390" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Click Me to Fail"/>
+                    <state key="normal" title="Nav1 (fails)"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="422">
+                    <rect key="frame" x="16" y="273" width="390" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Nav2 (does nothing)"/>
+                    <connections>
+                        <action selector="Nav2Button_TouchUpInside:" destination="-1" id="653" eventType="touchUpInside"/>
+                    </connections>
                 </button>
             </subviews>
         </view>

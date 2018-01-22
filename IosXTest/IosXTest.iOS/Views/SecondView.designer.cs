@@ -5,13 +5,15 @@
 // Manual changes to this file will not be maintained.
 //
 using Foundation;
+using System;
+using System.CodeDom.Compiler;
 
 namespace IosXTest.iOS.Views
 {
-    [Register("SecondView")]
+    [Register ("SecondView")]
     partial class SecondView
     {
-        void ReleaseDesignerOutlets()
+        void ReleaseDesignerOutlets ()
         {
         }
     }

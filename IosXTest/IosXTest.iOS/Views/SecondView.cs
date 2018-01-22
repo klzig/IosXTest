@@ -23,6 +23,7 @@ namespace IosXTest.iOS.Views
 
         public override void ViewDidLoad()
         {
+            // Never makes it here...
             base.ViewDidLoad();
 
             // Perform any additional setup after loading the view, typically from a nib.

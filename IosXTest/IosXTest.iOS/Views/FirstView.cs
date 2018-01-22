@@ -8,7 +8,7 @@ using MvvmCross.iOS.Views.Presenters.Attributes;
 
 namespace IosXTest.iOS.Views
 {
-    public partial class FirstView : MvxViewController
+    public partial class FirstView : MvxViewController<FirstViewModel>
     {
         public FirstView() : base("FirstView", null)
         {
@@ -29,8 +29,13 @@ namespace IosXTest.iOS.Views
             var set = this.CreateBindingSet<FirstView, FirstViewModel>();
             set.Bind(Label).To(vm => vm.Hello);
             set.Bind(TextField).To(vm => vm.Hello);
-            set.Bind(Button).To(vm => vm.ButtonCommand);
+            set.Bind(Nav1Button).To(vm => vm.ButtonCommand);
             set.Apply();
+        }
+
+        partial void Nav2Button_TouchUpInside(UIButton sender)
+        {
+            ViewModel.NavigateTo();
         }
     }
 }
