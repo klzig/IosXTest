@@ -9,7 +9,7 @@ namespace IosXTest.Core.ViewModels
 {
     public class SecondViewModel : MvxViewModel
     {
-        SecondViewModel()
+        public SecondViewModel()
         {
             // Never makes it here...
         }
